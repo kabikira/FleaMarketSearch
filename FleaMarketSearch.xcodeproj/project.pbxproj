@@ -99,8 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				3B786C5529212B7A00E195E0 /* FleaMarketSearchApp.swift */,
-				3B786C5729212B7A00E195E0 /* ContentView.swift */,
 				3B786C7F2924D84200E195E0 /* WebView.swift */,
+				3B786C5729212B7A00E195E0 /* ContentView.swift */,
 				3B786C812924D9B400E195E0 /* MerucariView.swift */,
 				3B786C5929212B7C00E195E0 /* Assets.xcassets */,
 				3B786C5B29212B7C00E195E0 /* Preview Content */,

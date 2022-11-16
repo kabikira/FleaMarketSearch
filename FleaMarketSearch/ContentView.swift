@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             if isShowingView {
-                MerucariView()
+                MerucariView(isShowSubView: $isShowingView)
             } else {
                 Button {
                     isShowingView.toggle()
