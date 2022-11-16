@@ -9,15 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State var isShowingView: Bool = false
     var body: some View {
         VStack {
-            NavigationView {
-                NavigationLink(destination: MerucariView()) {
-                    Text("検索")
+            if isShowingView {
+                MerucariView()
+            } else {
+                Button {
+                    isShowingView.toggle()
+                } label: {
+                    Text("切り替え")
                 }
             }
+            
                   }
-        .padding()
     }
 }
 
