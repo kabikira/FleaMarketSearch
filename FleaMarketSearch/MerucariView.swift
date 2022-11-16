@@ -10,9 +10,10 @@ import SwiftUI
 struct MerucariView: View {
     let merucariUrl = "https://jp.mercari.com/search?keyword="
     @Binding var isShowSubView: Bool
+    @Binding var word: String
     var body: some View {
         VStack {
-            WebView(url: merucariUrl)
+            WebView(url: merucariUrl + "\(word)")
             VStack {
                 Button(action: {
                     self.isShowSubView = false
@@ -24,8 +25,8 @@ struct MerucariView: View {
     }
 }
 
-struct Merucari_Previews: PreviewProvider {
-    static var previews: some View {
-        MerucariView(isShowSubView: .constant(false))
-    }
-}
+//struct Merucari_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MerucariView(isShowSubView: .constant(false))
+//    }
+//}
