@@ -13,7 +13,9 @@ struct MerucariView: View {
     @Binding var word: String
     var body: some View {
         VStack {
-            WebView(url: merucariUrl + "\(word)")
+            // エンコーディング
+            let encodeString = word.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
+            WebView(url: merucariUrl + "\(encodeString!))")
             VStack {
                 Button(action: {
                     self.isShowSubView = false
