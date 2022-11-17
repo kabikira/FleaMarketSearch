@@ -1,14 +1,14 @@
 //
-//  MerucariView.swift
+//  RakumaView.swift
 //  FleaMarketSearch
 //
-//  Created by koala panda on 2022/11/16.
+//  Created by koala panda on 2022/11/17.
 //
 
 import SwiftUI
 
-struct MerucariView: View {
-    private let merucariUrl = "https://jp.mercari.com/search?keyword="
+struct RakumaView: View {
+    private let rakumaUrl = "https://fril.jp/s?query="
     @Binding var isShowView: Bool
     @Binding var word: String
     
@@ -16,7 +16,7 @@ struct MerucariView: View {
         VStack {
             // エンコーディング
             let encodeString = word.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
-            WebView(url: merucariUrl + "\(encodeString!)")
+            WebView(url: rakumaUrl + "\(encodeString!)")
             VStack {
                 Button(action: {
                     self.isShowView = false
@@ -27,9 +27,3 @@ struct MerucariView: View {
         }
     }
 }
-
-//struct Merucari_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MerucariView(isShowSubView: .constant(false))
-//    }
-//}

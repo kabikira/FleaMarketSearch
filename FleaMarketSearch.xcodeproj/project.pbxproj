@@ -18,6 +18,10 @@
 		3B786C822924D9B400E195E0 /* MerucariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B786C812924D9B400E195E0 /* MerucariView.swift */; };
 		3B786C862925C4C800E195E0 /* UserDefaultsOp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B786C852925C4C800E195E0 /* UserDefaultsOp.swift */; };
 		3B786C882926561700E195E0 /* WordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B786C872926561700E195E0 /* WordsView.swift */; };
+		3B786C8A29265E5000E195E0 /* RakumaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B786C8929265E5000E195E0 /* RakumaView.swift */; };
+		3B786C8C29265E6400E195E0 /* YafuokuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B786C8B29265E6400E195E0 /* YafuokuView.swift */; };
+		3B786C8E29265E7400E195E0 /* PaypayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B786C8D29265E7400E195E0 /* PaypayView.swift */; };
+		3B786C9029265E8A00E195E0 /* GoogleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B786C8F29265E8A00E195E0 /* GoogleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +56,10 @@
 		3B786C812924D9B400E195E0 /* MerucariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerucariView.swift; sourceTree = "<group>"; };
 		3B786C852925C4C800E195E0 /* UserDefaultsOp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsOp.swift; sourceTree = "<group>"; };
 		3B786C872926561700E195E0 /* WordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsView.swift; sourceTree = "<group>"; };
+		3B786C8929265E5000E195E0 /* RakumaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RakumaView.swift; sourceTree = "<group>"; };
+		3B786C8B29265E6400E195E0 /* YafuokuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YafuokuView.swift; sourceTree = "<group>"; };
+		3B786C8D29265E7400E195E0 /* PaypayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaypayView.swift; sourceTree = "<group>"; };
+		3B786C8F29265E8A00E195E0 /* GoogleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +113,12 @@
 				3B786C5529212B7A00E195E0 /* FleaMarketSearchApp.swift */,
 				3B786C7F2924D84200E195E0 /* WebView.swift */,
 				3B786C5729212B7A00E195E0 /* ContentView.swift */,
-				3B786C812924D9B400E195E0 /* MerucariView.swift */,
 				3B786C872926561700E195E0 /* WordsView.swift */,
+				3B786C812924D9B400E195E0 /* MerucariView.swift */,
+				3B786C8929265E5000E195E0 /* RakumaView.swift */,
+				3B786C8B29265E6400E195E0 /* YafuokuView.swift */,
+				3B786C8D29265E7400E195E0 /* PaypayView.swift */,
+				3B786C8F29265E8A00E195E0 /* GoogleView.swift */,
 				3B786C852925C4C800E195E0 /* UserDefaultsOp.swift */,
 				3B786C5929212B7C00E195E0 /* Assets.xcassets */,
 				3B786C5B29212B7C00E195E0 /* Preview Content */,
@@ -272,9 +284,13 @@
 				3B786C802924D84200E195E0 /* WebView.swift in Sources */,
 				3B786C822924D9B400E195E0 /* MerucariView.swift in Sources */,
 				3B786C882926561700E195E0 /* WordsView.swift in Sources */,
+				3B786C8C29265E6400E195E0 /* YafuokuView.swift in Sources */,
 				3B786C5829212B7A00E195E0 /* ContentView.swift in Sources */,
+				3B786C8A29265E5000E195E0 /* RakumaView.swift in Sources */,
 				3B786C862925C4C800E195E0 /* UserDefaultsOp.swift in Sources */,
+				3B786C8E29265E7400E195E0 /* PaypayView.swift in Sources */,
 				3B786C5629212B7A00E195E0 /* FleaMarketSearchApp.swift in Sources */,
+				3B786C9029265E8A00E195E0 /* GoogleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
