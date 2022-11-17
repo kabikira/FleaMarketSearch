@@ -18,7 +18,7 @@ struct ContentView: View {
         VStack {
             
             if isShowingView {
-                MerucariView(isShowSubView: $isShowingView, word: $word)
+                MerucariView(isShowView: $isShowingView, word: $word)
             } else {
                 ZStack {
                     // 背景
@@ -61,10 +61,15 @@ struct ContentView: View {
                     Text("検索")
                 }
                 Button {
+                    
                     showingSheet.toggle()
                 } label: {
                     Text("履歴")
                 }
+                .sheet(isPresented: $showingSheet) {
+                    WordsView(showingSheet: $showingSheet, words: $words)
+                }
+
             }
             
         }

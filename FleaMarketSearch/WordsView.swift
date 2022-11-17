@@ -8,13 +8,34 @@
 import SwiftUI
 
 struct WordsView: View {
+    @Binding var showingSheet: Bool
+    @Binding var words: [String]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                List {
+                    ForEach(0 ..< words.count, id: \.self) { index in
+                        
+                        Button (action: {
+                            
+                            // シート切り替え
+                            showingSheet.toggle()
+                            
+                        }) {
+                            Text(words[index])
+                            
+                        }
+                    }
+                }
+            }
+            .navigationTitle("検索履歴")
+        }
     }
 }
 
-struct WordsView_Previews: PreviewProvider {
-    static var previews: some View {
-        WordsView()
-    }
-}
+//struct WordsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        WordsView()
+//    }
+//}

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MerucariView: View {
     let merucariUrl = "https://jp.mercari.com/search?keyword="
-    @Binding var isShowSubView: Bool
+    @Binding var isShowView: Bool
     @Binding var word: String
     
     var body: some View {
@@ -19,7 +19,7 @@ struct MerucariView: View {
             WebView(url: merucariUrl + "\(encodeString!))")
             VStack {
                 Button(action: {
-                    self.isShowSubView = false
+                    self.isShowView = false
                 }, label: {
                     Text("戻る")
                 })
