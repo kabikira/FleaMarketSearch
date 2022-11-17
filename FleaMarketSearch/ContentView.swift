@@ -11,6 +11,7 @@ struct ContentView: View {
     @State var isShowingView: Bool = false
     @State var word = ""
     @State var words: [String] = []
+    @State var showingSheet: Bool = false
     
     var userDefaultsOp = UserDefaultsOp()
     var body: some View {
@@ -58,6 +59,11 @@ struct ContentView: View {
                     userDefaultsOp.wordsSet(words: words)
                 } label: {
                     Text("検索")
+                }
+                Button {
+                    showingSheet.toggle()
+                } label: {
+                    Text("履歴")
                 }
             }
             
