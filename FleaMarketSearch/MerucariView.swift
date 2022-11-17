@@ -11,6 +11,7 @@ struct MerucariView: View {
     let merucariUrl = "https://jp.mercari.com/search?keyword="
     @Binding var isShowSubView: Bool
     @Binding var word: String
+    
     var body: some View {
         VStack {
             // エンコーディング

@@ -10,6 +10,9 @@ import SwiftUI
 struct ContentView: View {
     @State var isShowingView: Bool = false
     @State var word = ""
+    @State var words: [String] = []
+    
+    var userDefaultsOp = UserDefaultsOp()
     var body: some View {
         VStack {
             
@@ -44,6 +47,15 @@ struct ContentView: View {
                 }
                 Button {
                     isShowingView.toggle()
+                    // 10個より多く要素が入っていたらインデックス0から削除
+                    if words.count > 10 {
+                        words.removeFirst()
+                    }
+                    // 一旦配列に保存し
+                    words.append(word)
+                    print("ContentView",words)
+                    // ここにユーザデフォルトに保存する処理
+                    userDefaultsOp.wordsSet(words: words)
                 } label: {
                     Text("検索")
                 }

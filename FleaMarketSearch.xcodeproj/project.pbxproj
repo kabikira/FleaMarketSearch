@@ -16,6 +16,7 @@
 		3B786C7329212B7C00E195E0 /* FleaMarketSearchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B786C7229212B7C00E195E0 /* FleaMarketSearchUITestsLaunchTests.swift */; };
 		3B786C802924D84200E195E0 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B786C7F2924D84200E195E0 /* WebView.swift */; };
 		3B786C822924D9B400E195E0 /* MerucariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B786C812924D9B400E195E0 /* MerucariView.swift */; };
+		3B786C862925C4C800E195E0 /* UserDefaultsOp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B786C852925C4C800E195E0 /* UserDefaultsOp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		3B786C7229212B7C00E195E0 /* FleaMarketSearchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleaMarketSearchUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3B786C7F2924D84200E195E0 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		3B786C812924D9B400E195E0 /* MerucariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerucariView.swift; sourceTree = "<group>"; };
+		3B786C852925C4C800E195E0 /* UserDefaultsOp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsOp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				3B786C7F2924D84200E195E0 /* WebView.swift */,
 				3B786C5729212B7A00E195E0 /* ContentView.swift */,
 				3B786C812924D9B400E195E0 /* MerucariView.swift */,
+				3B786C852925C4C800E195E0 /* UserDefaultsOp.swift */,
 				3B786C5929212B7C00E195E0 /* Assets.xcassets */,
 				3B786C5B29212B7C00E195E0 /* Preview Content */,
 			);
@@ -266,6 +269,7 @@
 				3B786C802924D84200E195E0 /* WebView.swift in Sources */,
 				3B786C822924D9B400E195E0 /* MerucariView.swift in Sources */,
 				3B786C5829212B7A00E195E0 /* ContentView.swift in Sources */,
+				3B786C862925C4C800E195E0 /* UserDefaultsOp.swift in Sources */,
 				3B786C5629212B7A00E195E0 /* FleaMarketSearchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
