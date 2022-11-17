@@ -67,7 +67,7 @@ struct ContentView: View {
                     Text("履歴")
                 }
                 .sheet(isPresented: $showingSheet) {
-                    WordsView(showingSheet: $showingSheet, words: $words)
+                    WordsView(showingSheet: $showingSheet, word: $word, words: $words)
                 }
 
             }
