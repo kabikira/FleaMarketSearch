@@ -1,5 +1,5 @@
 //
-//  RakumaView.swift
+//  YafuokuView.swift
 //  FleaMarketSearch
 //
 //  Created by koala panda on 2022/11/17.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct RakumaView: View {
-    private let rakumaUrl = "https://fril.jp/s?query="
+struct YafuokuView: View {
+    private let yafuokuUrl = "https://auctions.yahoo.co.jp/search/search?aq=-1&auccat=&ei=utf-8&fr=auc_top&oq=&p="
     @Binding var isShowView: Bool
     @Binding var word: String
     
@@ -16,13 +16,13 @@ struct RakumaView: View {
         VStack {
             // エンコーディング
             let encodeString = word.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
-            WebView(url: rakumaUrl + "\(encodeString!)")
+            WebView(url: yafuokuUrl + "\(encodeString!)")
             VStack {
-                Button(action: {
+                Button {
                     self.isShowView = false
-                }, label: {
+                } label: {
                     Text("戻る")
-                })
+                }
             }
         }
     }

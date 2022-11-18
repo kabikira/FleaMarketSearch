@@ -18,7 +18,7 @@ struct ContentView: View {
         VStack {
             
             if isShowingView {
-                MerucariView(isShowView: $isShowingView, word: $word)
+                HostingTabView(isShowView: $isShowingView, word: $word)
             } else {
                 ZStack {
                     // 背景

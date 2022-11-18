@@ -18,11 +18,11 @@ struct MerucariView: View {
             let encodeString = word.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
             WebView(url: merucariUrl + "\(encodeString!)")
             VStack {
-                Button(action: {
+                Button {
                     self.isShowView = false
-                }, label: {
+                } label: {
                     Text("戻る")
-                })
+                }
             }
         }
     }
