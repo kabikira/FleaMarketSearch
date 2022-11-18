@@ -20,19 +20,21 @@ struct ContentView: View {
             if isShowingView {
                 HostingTabView(isShowView: $isShowingView, word: $word)
             } else {
+                Spacer()
+                    .frame(height: 250)
                 ZStack {
                     // 背景
                     RoundedRectangle(cornerRadius: 8)
                         .fill(Color(red: 239 / 255,
                                     green: 239 / 255,
                                     blue: 241 / 255))
-                        .frame(height: 46)
+                        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width/6)
                     HStack {
                         // 虫眼鏡
                         Image(systemName: "magnifyingglass")
                             .foregroundColor(.gray)
                         // テキストフィールド
-                        TextField("ここで検索！", text: $word)
+                        TextField("なにをお探しですか？", text: $word)
                         
                         // 検索文字が空ではない場合は、クリアボタンを表示
                         if !word.isEmpty {
@@ -46,32 +48,42 @@ struct ContentView: View {
                         }
                     }
                 }
-                Button {
-                    isShowingView.toggle()
-                    // 10個より多く要素が入っていたらインデックス0から削除
-                    if words.count > 10 {
-                        words.removeFirst()
+                Spacer()
+                    .frame(height: 30)
+                    Button {
+                        isShowingView.toggle()
+                        // 10個より多く要素が入っていたらインデックス0から削除
+                        if words.count > 10 {
+                            words.removeFirst()
+                        }
+                        // 一旦配列に保存し
+                        words.append(word)
+                        print("ContentView",words)
+                        // ここにユーザデフォルトに保存する処理
+                        userDefaultsOp.wordsSet(words: words)
+                    } label: {
+                        Text("検索")
+                            .font(.title)
+                            .frame(width: UIScreen.main.bounds.width/4, height: UIScreen.main.bounds.width/6)
                     }
-                    // 一旦配列に保存し
-                    words.append(word)
-                    print("ContentView",words)
-                    // ここにユーザデフォルトに保存する処理
-                    userDefaultsOp.wordsSet(words: words)
-                } label: {
-                    Text("検索")
-                }
-                Button {
+                    .buttonStyle(.borderedProminent)
                     
-                    showingSheet.toggle()
-                } label: {
-                    Text("履歴")
-                }
-                .sheet(isPresented: $showingSheet) {
-                    WordsView(showingSheet: $showingSheet, word: $word, words: $words)
-                }
-
+                
+                    Button {
+                        showingSheet.toggle()
+                    } label: {
+                        Text("履歴")
+                            .font(.title)
+                            .frame(width: UIScreen.main.bounds.width/4, height: UIScreen.main.bounds.width/6)
+                    }
+                
+                    .buttonStyle(.bordered)
+                    .sheet(isPresented: $showingSheet) {
+                        WordsView(showingSheet: $showingSheet, word: $word, words: $words)
+                    }
+                Spacer()
+                    .frame(height: 100)
             }
-            
         }
     }
 }
