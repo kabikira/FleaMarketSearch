@@ -14,16 +14,12 @@ struct GoogleView: View {
     
     var body: some View {
         VStack {
+            VStack {
+                BackButtonView(isShowView: $isShowView)
+            }
             // エンコーディング
             let encodeString = word.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
             WebView(url: googleUrl + "\(encodeString!)")
-            VStack {
-                Button(action: {
-                    self.isShowView = false
-                }, label: {
-                    Text("戻る")
-                })
-            }
         }
     }
 }

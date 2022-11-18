@@ -14,17 +14,13 @@ struct MerucariView: View {
     
     var body: some View {
         VStack {
+            VStack {
+                BackButtonView(isShowView: $isShowView)
+            }
             // エンコーディング
             let encodeString = word.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
             WebView(url: merucariUrl + "\(encodeString!)")
-            VStack {
-                Button {
-                    self.isShowView = false
-                } label: {
-                    Text("戻る")
-                }
-            }
-        }
+                    }
     }
 }
 

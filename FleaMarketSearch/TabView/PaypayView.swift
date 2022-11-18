@@ -14,6 +14,9 @@ struct PaypayView: View {
     
     var body: some View {
         VStack {
+            VStack {
+                BackButtonView(isShowView: $isShowView)
+            }
             // エンコーディング
             let encodeString = word.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
             // paypayはワードがなにも入ってないと探してるページはありませんになるから文字が空のときはなにも検索してないページにいく
@@ -22,13 +25,6 @@ struct PaypayView: View {
             }
             else{
                 WebView(url: paypayUrl + "/search/\(encodeString!)")
-            }
-            VStack {
-                Button(action: {
-                    self.isShowView = false
-                }, label: {
-                    Text("戻る")
-                })
             }
         }
     }
