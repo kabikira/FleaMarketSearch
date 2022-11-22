@@ -20,13 +20,18 @@ struct ContentView: View {
             if isShowingView {
                 HostingTabView(isShowView: $isShowingView, word: $word)
             } else {
-                SearchScreenView(word: $word)
-                Spacer()
-                    .frame(height: 20)
-                HStack {
-                    SearchButtonView(word: $word, words: $words, showingSheet: $showingSheet, isShowingView: $isShowingView, userDefaultsOp: userDefaultsOp)
+                VStack {
+                    SearchScreenView(word: $word)
+                    Spacer()
+                        .frame(height: 20)
+                    HStack {
+                        SearchButtonView(word: $word, words: $words, showingSheet: $showingSheet, isShowingView: $isShowingView, userDefaultsOp: userDefaultsOp)
+                    }
                 }
+                Spacer()
+                    .frame(height: 250)
             }
+            
         }
     }
 }

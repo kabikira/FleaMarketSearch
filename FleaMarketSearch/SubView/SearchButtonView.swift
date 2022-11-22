@@ -10,7 +10,6 @@ import SwiftUI
 struct SearchButtonView: View {
     @Binding var word: String
     @Binding var words: [String]
-//    @Binding var isShowView: Bool
     @Binding var showingSheet: Bool
     @Binding var isShowingView: Bool
     var userDefaultsOp: UserDefaultsOp
@@ -19,8 +18,8 @@ struct SearchButtonView: View {
             showingSheet.toggle()
         } label: {
             Text("履歴")
-                .font(.title)
-                .frame(width: UIScreen.main.bounds.width/4, height: UIScreen.main.bounds.width/6)
+                .font(.title2)
+                .frame(width: UIScreen.main.bounds.width/6, height: UIScreen.main.bounds.width/8)
         }
         
         .buttonStyle(.bordered)
@@ -45,8 +44,8 @@ struct SearchButtonView: View {
             userDefaultsOp.wordsSet(words: words)
         } label: {
             Text("検索")
-                .font(.title)
-                .frame(width: UIScreen.main.bounds.width/4, height: UIScreen.main.bounds.width/6)
+                .font(.title2)
+                .frame(width: UIScreen.main.bounds.width/6, height: UIScreen.main.bounds.width/8)
         }
         .buttonStyle(.borderedProminent)
     }
