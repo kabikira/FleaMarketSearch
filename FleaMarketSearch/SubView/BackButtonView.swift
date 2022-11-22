@@ -16,7 +16,6 @@ struct BackButtonView: View {
             } label: {
                 Text("検索画面に戻る")
             }
-            .padding()
             .buttonStyle(.borderedProminent)
             Spacer()
         }

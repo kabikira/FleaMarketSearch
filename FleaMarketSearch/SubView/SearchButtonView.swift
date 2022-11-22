@@ -15,6 +15,10 @@ struct SearchButtonView: View {
     var userDefaultsOp: UserDefaultsOp
     var body: some View {
         Button {
+            // 10個より多く要素が入っていたらインデックス0から削除
+            if words.count > 10 {
+                words.removeFirst()
+            }
             showingSheet.toggle()
         } label: {
             Text("履歴")
