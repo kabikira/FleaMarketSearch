@@ -16,27 +16,27 @@ struct HostingTabView: View {
             TabView() {
                 MerucariView(isShowView: $isShowView, word: $word)
                     .tabItem {
-                            Image(systemName: "a")
+                            Image(systemName: "m.circle")
                             Text("メルカリ")
                     }.tag(0)
                 RakumaView(isShowView: $isShowView, word: $word)
                     .tabItem {
-                        Image(systemName: "b")
+                        Image(systemName: "r.circle")
                         Text("ラクマ")
                     }.tag(1)
                 YafuokuView(isShowView: $isShowView, word: $word)
                     .tabItem {
-                            Image(systemName: "a")
+                            Image(systemName: "y.circle")
                             Text("ヤフオク")
                     }.tag(2)
                 PaypayView(isShowView: $isShowView, word: $word)
                     .tabItem {
-                        Image(systemName: "b")
+                        Image(systemName: "p.circle")
                         Text("paypay")
                     }.tag(3)
                 GoogleView(isShowView: $isShowView, word: $word)
                     .tabItem {
-                        Image(systemName: "b")
+                        Image(systemName: "g.circle")
                         Text("グーグル")
                     }.tag(4)
             }
