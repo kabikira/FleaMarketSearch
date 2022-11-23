@@ -14,10 +14,10 @@ class UserDefaultsOp {
         
         userDefaults.set(words, forKey: "searchedWords")
         
-        let getWords: [String] = userDefaults.array(forKey: "searchedWords") as! [String]
+        let seachWords: [String] = userDefaults.array(forKey: "searchedWords") as! [String]
         
         // 重複したキーワードをならびかえずに除去
-        let orderedSet = NSOrderedSet(array: getWords)
+        let orderedSet = NSOrderedSet(array: seachWords)
         var uniqueValeus = orderedSet.array as! [String]
         
         //userDefaultsに10個より多く要素が入っていたらインデックス0から削除
