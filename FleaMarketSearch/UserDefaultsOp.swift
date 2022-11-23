@@ -10,26 +10,26 @@ import Foundation
 class UserDefaultsOp {
     var userDefaults = UserDefaults.standard
     
-    func wordsSet(words: [String]) {
+    func wordsSet(words: [String]) -> [String] {
         
         userDefaults.set(words, forKey: "searchedWords")
         
-        var getWords: [String] = userDefaults.array(forKey: "searchedWords") as! [String]
+        let getWords: [String] = userDefaults.array(forKey: "searchedWords") as! [String]
+        
+        // 重複したキーワードをならびかえずに除去
+        let orderedSet = NSOrderedSet(array: getWords)
+        var uniqueValeus = orderedSet.array as! [String]
         
         //userDefaultsに10個より多く要素が入っていたらインデックス0から削除
-        if getWords.count > 10 {
-            getWords.removeFirst()
-            userDefaults.set(getWords, forKey: "searchedWords")
+        if uniqueValeus.count > 10 {
+            uniqueValeus.removeFirst()
+            userDefaults.set(uniqueValeus, forKey: "searchedWords")
         }
         
-        print(getWords)
+        print(uniqueValeus)
+        return uniqueValeus
         
     }
     
-    // userDefaultsの配列を渡す
-    func passWord() -> [String] {
-        let passwords = userDefaults.array(forKey: "searchedWords") as! [String]
-        return passwords.reversed()
-    }
     
 }

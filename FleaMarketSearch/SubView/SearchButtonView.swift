@@ -16,9 +16,7 @@ struct SearchButtonView: View {
     var body: some View {
         Button {
             showingSheet.toggle()
-            // userDefaultsの配列を渡す
-            words = userDefaultsOp.passWord()
-            
+            words = userDefaultsOp.wordsSet(words: words)
         } label: {
             Text("履歴")
                 .font(.title2)
@@ -39,9 +37,7 @@ struct SearchButtonView: View {
                 words.append(word)
                 print("ContentView",words)
                 // ここにユーザデフォルトに保存する処理
-                userDefaultsOp.wordsSet(words: words)
-                // userDefaultsの配列を渡す
-                words = userDefaultsOp.passWord()
+                words = userDefaultsOp.wordsSet(words: words)
             }
             
         } label: {
