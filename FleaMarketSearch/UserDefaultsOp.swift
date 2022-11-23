@@ -12,7 +12,7 @@ class UserDefaultsOp {
     
     func wordsSet(words: [String]) {
         userDefaults.set(words, forKey: "searchedWords")
-//        print("wordsSet", userDefaults.stringArray(forKey: "searchedWords"))
+        //        print("wordsSet", userDefaults.stringArray(forKey: "searchedWords"))
         
         
     }
@@ -27,10 +27,12 @@ class UserDefaultsOp {
         let orderedSet = NSOrderedSet(array: words)
         let uniqueValeus = orderedSet.array as! [String]
         return uniqueValeus
-
+        
     }
     func readWords() -> [String] {
-        let readWords: [String] = userDefaults.stringArray(forKey: "searchedWords")!
+        guard let readWords: [String] = userDefaults.stringArray(forKey: "searchedWords") else {
+            return []
+        }
         print("getWords",readWords)
         return readWords
     }

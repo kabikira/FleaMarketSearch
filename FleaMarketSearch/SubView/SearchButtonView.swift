@@ -35,7 +35,7 @@ struct SearchButtonView: View {
             isShowingView.toggle()
             // 一旦配列に保存し
             if word != "" {
-                // userDefaults読み込み
+                // userDefaultsから読み込み
                 words = userDefaultsOp.readWords()
                 // 検索ワード追加
                 words.append(word)
