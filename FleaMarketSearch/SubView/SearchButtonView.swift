@@ -12,11 +12,12 @@ struct SearchButtonView: View {
     @Binding var words: [String]
     @Binding var showingSheet: Bool
     @Binding var isShowingView: Bool
+    
     var userDefaultsOp: UserDefaultsOp
     var body: some View {
         Button {
             showingSheet.toggle()
-            words = userDefaultsOp.wordsSet(words: words)
+            words = userDefaultsOp.readWords()
         } label: {
             Text("履歴")
                 .font(.title2)
@@ -34,10 +35,16 @@ struct SearchButtonView: View {
             isShowingView.toggle()
             // 一旦配列に保存し
             if word != "" {
+                // userDefaults読み込み
+                words = userDefaultsOp.readWords()
+                // 検索ワード追加
                 words.append(word)
-                print("ContentView",words)
-                // ここにユーザデフォルトに保存する処理
-                words = userDefaultsOp.wordsSet(words: words)
+                // 重複した文字列削除
+                let orderWords = userDefaultsOp.orderedSet(words: words)
+                //userDefaultsにセット
+                userDefaultsOp.wordsSet(words: orderWords)
+                //userDefaultsが10個以上要素あるとき頭から削除
+                let _ = userDefaultsOp.countRemove()
             }
             
         } label: {
@@ -53,7 +60,6 @@ struct WordsView: View {
     @Binding var showingSheet: Bool
     @Binding var word: String
     @Binding var words: [String]
-    
     
     var body: some View {
         NavigationView {

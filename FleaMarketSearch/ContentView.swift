@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State var isShowingView: Bool = false
     @State var word = ""
-    @State var words: [String] = []
+    @State var words:[String] = []
     @State var showingSheet: Bool = false
     
     var userDefaultsOp = UserDefaultsOp()
