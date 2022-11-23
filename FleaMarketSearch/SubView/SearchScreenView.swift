@@ -16,7 +16,7 @@ struct SearchScreenView: View {
                 .fill(Color(red: 239 / 255,
                             green: 239 / 255,
                             blue: 241 / 255))
-                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width/6)
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width/10)
             HStack {
                 // 虫眼鏡
                 Image(systemName: "magnifyingglass")
