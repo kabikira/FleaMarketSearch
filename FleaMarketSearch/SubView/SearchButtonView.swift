@@ -15,11 +15,10 @@ struct SearchButtonView: View {
     var userDefaultsOp: UserDefaultsOp
     var body: some View {
         Button {
-            // 10個より多く要素が入っていたらインデックス0から削除
-            if words.count > 10 {
-                words.removeFirst()
-            }
             showingSheet.toggle()
+            // userDefaultsの配列を渡す
+            words = userDefaultsOp.passWord()
+            
         } label: {
             Text("履歴")
                 .font(.title2)
@@ -31,21 +30,20 @@ struct SearchButtonView: View {
             WordsView(showingSheet: $showingSheet, word: $word, words: $words)
         }
         
-        
-        
         Spacer()
             .frame(width: 100)
         Button {
             isShowingView.toggle()
-            // 10個より多く要素が入っていたらインデックス0から削除
-            if words.count > 10 {
-                words.removeFirst()
-            }
             // 一旦配列に保存し
-            words.append(word)
-            print("ContentView",words)
-            // ここにユーザデフォルトに保存する処理
-            userDefaultsOp.wordsSet(words: words)
+            if word != "" {
+                words.append(word)
+                print("ContentView",words)
+                // ここにユーザデフォルトに保存する処理
+                userDefaultsOp.wordsSet(words: words)
+                // userDefaultsの配列を渡す
+                words = userDefaultsOp.passWord()
+            }
+            
         } label: {
             Text("検索")
                 .font(.title2)

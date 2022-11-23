@@ -26,4 +26,10 @@ class UserDefaultsOp {
         
     }
     
+    // userDefaultsの配列を渡す
+    func passWord() -> [String] {
+        let passwords = userDefaults.array(forKey: "searchedWords") as! [String]
+        return passwords.reversed()
+    }
+    
 }

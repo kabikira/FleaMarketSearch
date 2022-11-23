@@ -12,6 +12,7 @@ struct WordsView: View {
     @Binding var word: String
     @Binding var words: [String]
     
+    
     var body: some View {
         NavigationView {
             VStack {
