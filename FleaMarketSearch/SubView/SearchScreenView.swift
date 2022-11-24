@@ -23,6 +23,7 @@ struct SearchScreenView: View {
                     .foregroundColor(.gray)
                 // テキストフィールド
                 TextField("なにをお探しですか？", text: $word)
+                    .foregroundColor(.black)
                 
                 // 検索文字が空ではない場合は、クリアボタンを表示
                 if !word.isEmpty {
