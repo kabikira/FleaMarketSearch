@@ -11,6 +11,8 @@ struct BackButtonView: View {
     @Binding var isShowView: Bool
     var body: some View {
         HStack {
+            Spacer()
+                .frame(width: 5)
             Button {
                 self.isShowView = false
             } label: {
