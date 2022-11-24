@@ -20,9 +20,13 @@ struct ContentView: View {
             if isShowingView {
                 HostingTabView(isShowView: $isShowingView, word: $word)
             } else {
+                Spacer()
+                    .frame(height: 100)
                 VStack {
                     VStack {
-                        Text("フリマ検索")
+                        Text("フリマ")
+                                    .font(.system(size: 50, weight: .bold, design: .rounded))
+                        Text("ケンサク")
                                     .font(.system(size: 50, weight: .bold, design: .rounded))
                     }
                     SearchScreenView(word: $word)
