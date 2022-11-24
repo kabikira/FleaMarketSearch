@@ -12,7 +12,7 @@ struct SearchScreenView: View {
     var body: some View {
         ZStack {
             // 背景
-            RoundedRectangle(cornerRadius: 30)
+            RoundedRectangle(cornerRadius: 8)
                 .fill(Color(red: 239 / 255,
                             green: 239 / 255,
                             blue: 241 / 255))
