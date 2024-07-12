@@ -20,7 +20,6 @@ struct WebView: UIViewRepresentable {
         init(_ parent: WebView) {
             self.parent = parent
         }
-        
         // WebViewの読み込み状況を監視する
         func addProgressObserver() {
             parent.webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
@@ -67,5 +66,24 @@ struct WebView: UIViewRepresentable {
         }
         let request = URLRequest(url: url)
         webView.load(request)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            let hiddenProfileScript = """
+                var headerWrapper = document.getElementsByClassName('header_wrapper');
+                var pageHeader = document.getElementsByClassName('page-header');
+
+                if (headerWrapper.length > 0) {
+                    headerWrapper[0].style.display = 'none';
+                }
+
+                if (pageHeader.length > 0) {
+                    pageHeader[0].style.display = 'none';
+                }
+                """
+            webView.evaluateJavaScript(hiddenProfileScript) { _, error in
+                if let error = error {
+                    print("JavaScript Error: \(error.localizedDescription)")
+                }
+            }
+        }
     }
 }
