@@ -12,7 +12,7 @@ struct SearchButtonView: View {
     @Binding var words: [String]
     @Binding var showingSheet: Bool
     @Binding var isShowingView: Bool
-    
+
     var userDefaultsOp: UserDefaultsOp
     var body: some View {
         Button {
@@ -23,12 +23,12 @@ struct SearchButtonView: View {
                 .font(.title2)
                 .frame(width: UIScreen.main.bounds.width/6, height: UIScreen.main.bounds.width/8)
         }
-        
+
         .buttonStyle(.bordered)
         .sheet(isPresented: $showingSheet) {
             WordsView(showingSheet: $showingSheet, word: $word, words: $words)
         }
-        
+
         Spacer()
             .frame(width: 100)
         Button {
@@ -46,7 +46,7 @@ struct SearchButtonView: View {
                 //userDefaultsが10個以上要素あるとき頭から削除
                 let _ = userDefaultsOp.countRemove()
             }
-            
+
         } label: {
             Text("検索")
                 .font(.title2)
@@ -60,29 +60,37 @@ struct WordsView: View {
     @Binding var showingSheet: Bool
     @Binding var word: String
     @Binding var words: [String]
-    
+
     var body: some View {
         NavigationView {
             VStack {
                 List {
-                    ForEach(0 ..< words.count, id: \.self) { index in
-                        
+                    ForEach(0 ..< min(words.count, 5), id: \.self) { index in
+
                         Button {
-                            
+
                             // 検索ワードに追加
                             word = words[index]
                             // シート切り替え
                             showingSheet.toggle()
-                            
-                            
+
+
                         } label: {
                             Text(words[index])
-                            
+
                         }
                     }
+                    .onDelete(perform: delete)
                 }
             }
             .navigationTitle("検索履歴")
+            .toolbar {
+                EditButton() // 編集ボタンを追加して、削除モードを有効にする
+            }
         }
+    }
+
+    private func delete(at offsets: IndexSet) {
+        words.remove(atOffsets: offsets)
     }
 }
