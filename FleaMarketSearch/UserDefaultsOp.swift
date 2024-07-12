@@ -18,7 +18,7 @@ class UserDefaultsOp {
     }
     func countRemove() {
         var countRemove: [String] = userDefaults.stringArray(forKey: "searchedWords")!
-        if countRemove.count > 10 {
+        if countRemove.count > 20 {
             countRemove.removeFirst()
             wordsSet(words: countRemove)
         }
