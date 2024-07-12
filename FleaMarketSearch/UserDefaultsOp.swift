@@ -12,9 +12,6 @@ class UserDefaultsOp {
     
     func wordsSet(words: [String]) {
         userDefaults.set(words, forKey: "searchedWords")
-        //        print("wordsSet", userDefaults.stringArray(forKey: "searchedWords"))
-        
-        
     }
     func countRemove() {
         var countRemove: [String] = userDefaults.stringArray(forKey: "searchedWords")!
@@ -33,7 +30,6 @@ class UserDefaultsOp {
         guard let readWords: [String] = userDefaults.stringArray(forKey: "searchedWords") else {
             return []
         }
-        print("getWords",readWords)
         return readWords
     }
     
