@@ -66,7 +66,6 @@ struct WebView: UIViewRepresentable {
         }
         let request = URLRequest(url: url)
         webView.load(request)
-        print(url)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             let hiddenProfileScript = """
                 var headerWrapper = document.getElementsByClassName('header_wrapper');
