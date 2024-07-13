@@ -65,7 +65,7 @@ struct WordsView: View {
         NavigationView {
             VStack {
                 List {
-                    ForEach(0 ..< min(words.count, 5), id: \.self) { index in
+                    ForEach(0 ..< min(words.count, 20), id: \.self) { index in
 
                         Button {
 
