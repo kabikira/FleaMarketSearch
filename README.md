@@ -13,5 +13,5 @@ SwiftUI を使用しているので、iOS 13+ と macOS 10.15+ をターゲッ�
 
 # ユーザーからのレビュー  
 ユーザーからのレビューで特定のサイトのヘッダーを消してほしい､履歴を削除できるようにしてほしいと要望あり以下プルリクで対応し､アップデートしました｡  
-https://github.com/kabikira/FleaMarketSearch/pull/8  
-https://github.com/kabikira/FleaMarketSearch/pull/4  
+ブラウザのヘッダー削除 https://github.com/kabikira/FleaMarketSearch/pull/8  
+検索履歴の削除 https://github.com/kabikira/FleaMarketSearch/pull/4  
