@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import GoogleMobileAds
 
 struct ContentView: View {
     @State var isShowingView: Bool = false
@@ -16,7 +17,9 @@ struct ContentView: View {
     var userDefaultsOp = UserDefaultsOp()
     var body: some View {
         VStack {
-            
+            AdMobBannerView()
+                .frame(height: 50)
+                .background(Color.white)
             if isShowingView {
                 HostingTabView(isShowView: $isShowingView, word: $word)
             } else {
@@ -43,6 +46,33 @@ struct ContentView: View {
     }
 }
 
+struct AdMobBannerView: UIViewRepresentable {
+
+    // SDKの BannerView を返す
+    func makeUIView(context: Context) -> GoogleMobileAds.BannerView {
+        // v12 以降の新しい型・定数名
+        let banner = GoogleMobileAds.BannerView(adSize: AdSizeBanner)
+        if let unitID = Bundle.main.object(forInfoDictionaryKey: "GADBannerAdUnitID") as? String,
+           unitID.isEmpty == false {
+            banner.adUnitID = unitID
+        } else {
+            assertionFailure("GADBannerUnitID が Info.plist から取得できません")
+            banner.adUnitID = "ca-app-pub-3940256099942544/2934735716" // フォールバック用テストID
+        }
+
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let rootVC = windowScene.windows.first?.rootViewController {
+            banner.rootViewController = rootVC
+        }
+
+        // v12 以降は GADRequest -> Request に変更
+        banner.load(Request())
+        return banner
+    }
+
+    func updateUIView(_ uiView: GoogleMobileAds.BannerView, context: Context) {
+    }
+}
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

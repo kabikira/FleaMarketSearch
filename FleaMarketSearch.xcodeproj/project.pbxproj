@@ -23,8 +23,10 @@
 		3B786C9029265E8A00E195E0 /* GoogleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B786C8F29265E8A00E195E0 /* GoogleView.swift */; };
 		3B786C9529272E4100E195E0 /* HostingTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B786C9429272E4100E195E0 /* HostingTabView.swift */; };
 		3B786C972927343700E195E0 /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B786C962927343700E195E0 /* BackButtonView.swift */; };
+		3BB18AE82E8251C400FD1449 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 3BB18AE72E8251C400FD1449 /* GoogleMobileAds */; };
 		3BBD71C4292CCBF900D30038 /* SearchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD71C3292CCBF900D30038 /* SearchScreenView.swift */; };
 		3BBD71C6292CD05200D30038 /* SearchButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD71C5292CD05200D30038 /* SearchButtonView.swift */; };
+		3BE76DA42F2B218B00A4C4A1 /* AdMobIDOp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE76DA32F2B218B00A4C4A1 /* AdMobIDOp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,8 +67,11 @@
 		3B786C8F29265E8A00E195E0 /* GoogleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleView.swift; sourceTree = "<group>"; };
 		3B786C9429272E4100E195E0 /* HostingTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingTabView.swift; sourceTree = "<group>"; };
 		3B786C962927343700E195E0 /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
+		3BB18B732E84AE8B00FD1449 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		3BB18B742E84AE9900FD1449 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		3BBD71C3292CCBF900D30038 /* SearchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenView.swift; sourceTree = "<group>"; };
 		3BBD71C5292CD05200D30038 /* SearchButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButtonView.swift; sourceTree = "<group>"; };
+		3BE76DA32F2B218B00A4C4A1 /* AdMobIDOp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobIDOp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BB18AE82E8251C400FD1449 /* GoogleMobileAds in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +107,8 @@
 				3B786C6529212B7C00E195E0 /* FleaMarketSearchTests */,
 				3B786C6F29212B7C00E195E0 /* FleaMarketSearchUITests */,
 				3B786C5329212B7A00E195E0 /* Products */,
+				3BB18B732E84AE8B00FD1449 /* Debug.xcconfig */,
+				3BB18B742E84AE9900FD1449 /* Release.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				3B5AE76D292CEEB4009A57CF /* Info.plist */,
+				3BE76DA32F2B218B00A4C4A1 /* AdMobIDOp.swift */,
 				3B786C5529212B7A00E195E0 /* FleaMarketSearchApp.swift */,
 				3B786C7F2924D84200E195E0 /* WebView.swift */,
 				3B786C852925C4C800E195E0 /* UserDefaultsOp.swift */,
@@ -242,7 +251,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1400;
-				LastUpgradeCheck = 1400;
+				LastUpgradeCheck = 1630;
 				TargetAttributes = {
 					3B786C5129212B7A00E195E0 = {
 						CreatedOnToolsVersion = 14.0.1;
@@ -266,6 +275,9 @@
 				Base,
 			);
 			mainGroup = 3B786C4929212B7A00E195E0;
+			packageReferences = (
+				3BB18AE62E8251C400FD1449 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+			);
 			productRefGroup = 3B786C5329212B7A00E195E0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -315,6 +327,7 @@
 				3B786C5829212B7A00E195E0 /* ContentView.swift in Sources */,
 				3BBD71C6292CD05200D30038 /* SearchButtonView.swift in Sources */,
 				3B786C8A29265E5000E195E0 /* RakumaView.swift in Sources */,
+				3BE76DA42F2B218B00A4C4A1 /* AdMobIDOp.swift in Sources */,
 				3B786C862925C4C800E195E0 /* UserDefaultsOp.swift in Sources */,
 				3B786C972927343700E195E0 /* BackButtonView.swift in Sources */,
 				3B786C8E29265E7400E195E0 /* PaypayView.swift in Sources */,
@@ -359,6 +372,7 @@
 /* Begin XCBuildConfiguration section */
 		3B786C7429212B7C00E195E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BB18B732E84AE8B00FD1449 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -391,8 +405,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = DW275526Z6;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -419,6 +435,7 @@
 		};
 		3B786C7529212B7C00E195E0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BB18B742E84AE9900FD1449 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -451,8 +468,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = DW275526Z6;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -479,11 +498,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FleaMarketSearch/Preview Content\"";
-				DEVELOPMENT_TEAM = DW275526Z6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FleaMarketSearch/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "フリマケンサク";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "このアプリは、より関連性の高い広告を表示するために、デバイスの広告識別子へのアクセスを必要とします。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
@@ -511,11 +530,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FleaMarketSearch/Preview Content\"";
-				DEVELOPMENT_TEAM = DW275526Z6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FleaMarketSearch/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "フリマケンサク";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "このアプリは、より関連性の高い広告を表示するために、デバイスの広告識別子へのアクセスを必要とします。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
@@ -538,11 +557,9 @@
 		3B786C7A29212B7C00E195E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DW275526Z6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
@@ -558,11 +575,9 @@
 		3B786C7B29212B7C00E195E0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DW275526Z6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
@@ -578,10 +593,8 @@
 		3B786C7D29212B7C00E195E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DW275526Z6;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.protonmail-kabikirar2.FleaMarketSearchUITests";
@@ -596,10 +609,8 @@
 		3B786C7E29212B7C00E195E0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DW275526Z6;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.protonmail-kabikirar2.FleaMarketSearchUITests";
@@ -621,7 +632,7 @@
 				3B786C7529212B7C00E195E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		3B786C7629212B7C00E195E0 /* Build configuration list for PBXNativeTarget "FleaMarketSearch" */ = {
 			isa = XCConfigurationList;
@@ -630,7 +641,7 @@
 				3B786C7829212B7C00E195E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		3B786C7929212B7C00E195E0 /* Build configuration list for PBXNativeTarget "FleaMarketSearchTests" */ = {
 			isa = XCConfigurationList;
@@ -639,7 +650,7 @@
 				3B786C7B29212B7C00E195E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		3B786C7C29212B7C00E195E0 /* Build configuration list for PBXNativeTarget "FleaMarketSearchUITests" */ = {
 			isa = XCConfigurationList;
@@ -648,9 +659,28 @@
 				3B786C7E29212B7C00E195E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3BB18AE62E8251C400FD1449 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3BB18AE72E8251C400FD1449 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3BB18AE62E8251C400FD1449 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3B786C4A29212B7A00E195E0 /* Project object */;
 }
