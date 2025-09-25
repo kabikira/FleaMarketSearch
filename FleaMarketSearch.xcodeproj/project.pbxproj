@@ -30,10 +30,10 @@
 		3BB18B7D2E8554B600FD1449 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3BB18B7C2E8554B600FD1449 /* FirebaseAnalytics */; };
 		3BBD71C4292CCBF900D30038 /* SearchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD71C3292CCBF900D30038 /* SearchScreenView.swift */; };
 		3BBD71C6292CD05200D30038 /* SearchButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD71C5292CD05200D30038 /* SearchButtonView.swift */; };
+		3BBD71CB292CD40000D30038 /* ForceUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD71CA292CD40000D30038 /* ForceUpdateView.swift */; };
 		3BE76DA42F2B218B00A4C4A1 /* AdMobIDOp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE76DA32F2B218B00A4C4A1 /* AdMobIDOp.swift */; };
 		3BE76DA92F2B2F0E00A4C4A1 /* RemoteConfigOp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE76DA62F2B2F0E00A4C4A1 /* RemoteConfigOp.swift */; };
 		3BE76DAB2F2B2F6000A4C4A1 /* AdMobBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE76DAA2F2B2F6000A4C4A1 /* AdMobBannerView.swift */; };
-		3BBD71CB292CD40000D30038 /* ForceUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBD71CA292CD40000D30038 /* ForceUpdateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,10 +79,10 @@
 		3BB18B752E8502EA00FD1449 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3BBD71C3292CCBF900D30038 /* SearchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenView.swift; sourceTree = "<group>"; };
 		3BBD71C5292CD05200D30038 /* SearchButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButtonView.swift; sourceTree = "<group>"; };
+		3BBD71CA292CD40000D30038 /* ForceUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceUpdateView.swift; sourceTree = "<group>"; };
 		3BE76DA32F2B218B00A4C4A1 /* AdMobIDOp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobIDOp.swift; sourceTree = "<group>"; };
 		3BE76DA62F2B2F0E00A4C4A1 /* RemoteConfigOp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigOp.swift; sourceTree = "<group>"; };
 		3BE76DAA2F2B2F6000A4C4A1 /* AdMobBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobBannerView.swift; sourceTree = "<group>"; };
-		3BBD71CA292CD40000D30038 /* ForceUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceUpdateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -537,7 +537,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.2;
+				MARKETING_VERSION = 2.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.imael.FleaMarketSearchApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -570,7 +570,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.2;
+				MARKETING_VERSION = 2.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.imael.FleaMarketSearchApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

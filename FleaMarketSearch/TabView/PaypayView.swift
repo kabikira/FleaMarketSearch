@@ -9,22 +9,22 @@ import SwiftUI
 
 struct PaypayView: View {
     private let paypayUrl = "https://paypayfleamarket.yahoo.co.jp"
+    @ObservedObject var store: WebViewStore
     @Binding var isShowView: Bool
     @Binding var word: String
-    
+
     var body: some View {
         VStack {
             VStack {
                 BackButtonView(isShowView: $isShowView)
             }
             // エンコーディング
-            let encodeString = word.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
+            let encodeString = word.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
             // paypayはワードがなにも入ってないと探してるページはありませんになるから文字が空のときはなにも検索してないページにいく
-            if encodeString == "" {
-                WebView(url: paypayUrl)
-            }
-            else{
-                WebView(url: paypayUrl + "/search/\(encodeString!)")
+            if encodeString.isEmpty {
+                WebView(store: store, url: paypayUrl)
+            } else {
+                WebView(store: store, url: paypayUrl + "/search/" + encodeString)
             }
         }
     }
