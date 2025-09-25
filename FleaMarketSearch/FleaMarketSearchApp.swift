@@ -9,6 +9,7 @@ import SwiftUI
 import GoogleMobileAds
 import AppTrackingTransparency
 import AdSupport
+import FirebaseCore
 
 // AppDelegateでAdMobを初期化
 class AppDelegate: NSObject, UIApplicationDelegate {
@@ -16,6 +17,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
+        FirebaseApp.configure()
         MobileAds.shared.start { _ in
         }
         return true
@@ -25,12 +27,30 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct FleaMarketSearchApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    @Environment(\.scenePhase) private var scenePhase
+    @StateObject private var remoteConfigOp = RemoteConfigOp()
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .onAppear {
-                    requestTrackingAuthorization()
+            ZStack {
+                ContentView()
+                    .onAppear {
+                        requestTrackingAuthorization()
+                    }
+                ForceUpdateView(requirement: remoteConfigOp.requirement) {
+                    Task {
+                        await remoteConfigOp.refresh(force: true)
+                    }
                 }
+            }
+            .task {
+                await remoteConfigOp.refresh()
+            }
+            .onChange(of: scenePhase) { newValue in
+                guard newValue == .active else { return }
+                Task {
+                    await remoteConfigOp.refresh()
+                }
+            }
         }
     }
 

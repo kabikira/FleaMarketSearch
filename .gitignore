@@ -1,0 +1,14 @@
+# macOS / Editor
+.DS_Store
+*.swp
+
+# Xcode user data
+**/xcuserdata/
+*.xcuserstate
+
+# Build artifacts
+DerivedData/
+*.xcbuild
+
+# Firebase secrets
+FleaMarketSearch/GoogleService-Info.plist
