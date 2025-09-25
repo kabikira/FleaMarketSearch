@@ -9,18 +9,19 @@ import SwiftUI
 
 struct MerucariView: View {
     private let merucariUrl = "https://jp.mercari.com/search?keyword="
+    @ObservedObject var store: WebViewStore
     @Binding var isShowView: Bool
     @Binding var word: String
-    
+
     var body: some View {
         VStack {
             VStack {
                 BackButtonView(isShowView: $isShowView)
             }
             // エンコーディング
-            let encodeString = word.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
-            WebView(url: merucariUrl + "\(encodeString!)")
-                    }
+            let encodeString = word.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+            WebView(store: store, url: merucariUrl + encodeString)
+        }
     }
 }
 
