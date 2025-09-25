@@ -16,7 +16,9 @@ struct ContentView: View {
     var userDefaultsOp = UserDefaultsOp()
     var body: some View {
         VStack {
-            
+            AdMobBannerView()
+                .frame(height: 50)
+                .background(Color.white)
             if isShowingView {
                 HostingTabView(isShowView: $isShowingView, word: $word)
             } else {
